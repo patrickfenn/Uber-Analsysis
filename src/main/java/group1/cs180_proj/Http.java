@@ -33,11 +33,11 @@ public class Http {
   }
    
   Search lastSearch;
-  
+
    
    public  ArrayList<Uber> getSearch(String column, String entry) throws Exception {
        lastSearch = new Search(column, entry);
-       String ip = "http://localhost:3000/search/";
+       String ip = "http://134.122.39.21:3000/search/";
        ArrayList<Uber> ret = new ArrayList();
        URL url = new URL(ip);
        HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -78,8 +78,8 @@ public class Http {
          return ret;
     }
      public  String getAnalysis() throws Exception {
-       
-       String ip = "http://localhost:3000/analysis/";
+
+       String ip = "http://134.122.39.21:3000/analysis/";
        String ret;
        URL url = new URL(ip);
        HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -109,7 +109,7 @@ public class Http {
     }
  
      public  Uber postInsert(Uber u) throws Exception {
-       String ip = "http://localhost:3000/insert/";
+       String ip = "http://134.122.39.21:3000/insert/";
 
        URL url = new URL(ip);
        HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -142,8 +142,8 @@ public class Http {
         
     }
      public  void postEdit(Uber u) throws Exception {
-       String ip = "http://localhost:3000/edit/";
-      
+       String ip = "http://134.122.39.21:3000/edit/";
+
        URL url = new URL(ip);
        HttpURLConnection con = (HttpURLConnection) url.openConnection();
        con.setRequestMethod("POST");
@@ -176,8 +176,8 @@ public class Http {
     }
      
       public  void postRemove(String i) throws Exception {
-       String ip = "http://localhost:3000/remove/";
-     
+       String ip = "http://134.122.39.21:3000/remove/";
+
        URL url = new URL(ip);
        HttpURLConnection con = (HttpURLConnection) url.openConnection();
        con.setRequestMethod("POST");
