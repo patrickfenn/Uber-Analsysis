@@ -1,8 +1,10 @@
-module group1.cs180_proj {
-    requires javafx.fxml;
+module com.example.uberanalysis {
     requires javafx.controls;
+    requires javafx.fxml;
     requires java.net.http;
     requires org.json;
-    opens group1.cs180_proj to javafx.fxml;
-    exports group1.cs180_proj;
+
+
+    opens com.example.uberanalysis to javafx.fxml;
+    exports com.example.uberanalysis;
 }
